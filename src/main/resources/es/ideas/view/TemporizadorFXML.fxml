@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" stylesheets="@../css/default.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.ideas.controller.TemporizadorController">
+   <children>
+      <GridPane layoutX="126.0" prefHeight="400.0" prefWidth="575.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="199.0" minHeight="10.0" prefHeight="102.40001220703124" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="249.0" minHeight="10.0" prefHeight="196.79998779296875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ButtonBar prefHeight="100.0" prefWidth="628.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <buttons>
+                  <TextField fx:id="recordatorio" promptText="Recordatorio" />
+                  <Button fx:id="idPlay" alignment="CENTER" mnemonicParsing="false" onAction="#play" prefHeight="30.0" prefWidth="250.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/play.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="idPause" alignment="CENTER" mnemonicParsing="false" onAction="#pause" prefHeight="30.0" prefWidth="250.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/pause.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="idReset" alignment="CENTER" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="250.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="idNuevo" alignment="CENTER" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="250.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </ButtonBar>
+            <Label fx:id="horas" alignment="CENTER" prefHeight="110.0" prefWidth="150.0" styleClass="cifra" text="0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="76.0" />
+               </font>
+            </Label>
+            <Label fx:id="minutos" alignment="CENTER" prefHeight="110.0" prefWidth="150.0" styleClass="cifra" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="76.0" />
+               </font>
+            </Label>
+            <Label fx:id="segundos" alignment="CENTER" prefHeight="110.0" prefWidth="150.0" styleClass="cifra" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="76.0" />
+               </font>
+            </Label>
+            <Button fx:id="idSubeHora" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#subeHora" prefHeight="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idSubeMin" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#subeMin" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idSubeSec" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#subeSec" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idBajaHora" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#bajaHora" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idBajaMin" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#bajaMin" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idBajaSec" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#bajaSec" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../img/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fx:id="cronotexto" layoutX="10.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEMPORIZADOR" wrappingWidth="288.4033966064453" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="85.0" />
+               </font>
+            </Text>
+            <Label fx:id="horaActual" alignment="BOTTOM_CENTER" prefHeight="17.0" prefWidth="118.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <ListView fx:id="listView" prefHeight="400.0" prefWidth="126.0" />
+   </children>
+</AnchorPane>
