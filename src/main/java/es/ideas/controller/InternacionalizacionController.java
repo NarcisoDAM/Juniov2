@@ -1,5 +1,6 @@
 package es.ideas.controller;
 
+import es.ideas.MultiLenguajeUI;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
