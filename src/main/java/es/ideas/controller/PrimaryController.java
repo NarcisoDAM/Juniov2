@@ -9,18 +9,36 @@ import javafx.scene.control.Button;
 public class PrimaryController {
 
     @FXML
-    private Button btnprueba;
+    private Button btnhojas;
     @FXML
-    private Button btnTemporizador;
+    private Button btnAnimaciones;
+    @FXML
+    private Button btnListeners;
+    @FXML
+    private Button btnInternacionalizacion;
+    @FXML
+    private Button btnJavadoc;
 
     @FXML
-    private void pruebabtn(ActionEvent event) throws IOException{
+    private void openHojasEstilos(ActionEvent event) {
+    }
+
+    @FXML
+    private void openAnimacionesYEstilos(ActionEvent event) throws IOException {
+        App.setRoot("view/TemporizadorFXML");
+    }
+
+    @FXML
+    private void openListenersYBlinders(ActionEvent event) throws IOException {
         App.setRoot("view/PaletaColoresFXML");
     }
 
     @FXML
-    private void btnTemporizador(ActionEvent event) throws IOException{
-        App.setRoot("view/TemporizadorFXML");
+    private void openi18n(ActionEvent event) {
+    }
+
+    @FXML
+    private void openJavadoc(ActionEvent event) {
     }
 
 }

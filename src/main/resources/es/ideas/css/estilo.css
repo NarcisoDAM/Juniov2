@@ -1,0 +1,38 @@
+#boton{
+    -fx-background-color: #029CE6;
+    -fx-background-radius: 30px;
+    -fx-font-size: 20px;
+    -fx-border-radius: 30px;
+    -fx-border-color: white;
+    -fx-border-width: 4px;
+}
+#tema{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-padding: 5;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+#choiceBox{
+    -fx-background-color: cyan;
+    -fx-border-color: black;
+}
+.choice-box .label {
+     -fx-font-weight: bold;
+}
+#resultado{
+    -fx-border-color: black;
+}
+#lista{
+    -fx-background-color: white;
+}
+#num1{
+    -fx-font-size: 20px;
+}
+#num2{
+    -fx-font-size: 20px;
+}
+.root{
+    -fx-background-color: #0AF2BE;
+    -fx-font-family: "Britannic Bold";
+}

@@ -20,12 +20,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnprueba" mnemonicParsing="false" onAction="#pruebabtn" text="Button" GridPane.columnIndex="1" />
-            <Button fx:id="btnTemporizador" mnemonicParsing="false" onAction="#btnTemporizador" text="Button" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="btnhojas" alignment="CENTER" mnemonicParsing="false" onAction="#openHojasEstilos" prefHeight="133.0" prefWidth="195.0" text="Hojas de estilos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="btnAnimaciones" mnemonicParsing="false" onAction="#openAnimacionesYEstilos" prefHeight="133.0" prefWidth="195.0" text="Animaciones y estilos" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="btnListeners" mnemonicParsing="false" onAction="#openListenersYBlinders" prefHeight="133.0" prefWidth="195.0" text="Listeners y blinders" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnInternacionalizacion" mnemonicParsing="false" onAction="#openi18n" prefHeight="133.0" prefWidth="195.0" text="Internacionalización" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnJavadoc" mnemonicParsing="false" onAction="#openJavadoc" prefHeight="133.0" prefWidth="195.0" text="Javadoc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" prefHeight="133.0" prefWidth="195.0" text="Button" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </children>
